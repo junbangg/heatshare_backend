@@ -35,7 +35,7 @@ module.exports = {
       jwt.verify(token, "qwe1234", (err, decoded) => {
         if (err) {
           return res.json({
-            success: 0,
+            status: 300,
             message: "Invalid Token..."
           });
         } else {
@@ -45,7 +45,7 @@ module.exports = {
       });
     } else {
       return res.json({
-        success: 0,
+        status: 400,
         message: "Access Denied! Unauthorized User"
       });
     }
