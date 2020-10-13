@@ -32,6 +32,8 @@ module.exports = {
   },
   getUserById: (req, res) => {
     const id = req.params.id;
+    // const id = req.body.id
+    console.log(id)
     getUserById(id, (err, results) => {
       if(err) {
         console.log(err);

@@ -1,5 +1,5 @@
 const { createUser,
-        getUsers,
+        // getUsers,
         getUserById,
         updateUser,
         deleteUser,
@@ -10,8 +10,8 @@ const router = require("express").Router();
 const { checkToken } = require("../../auth/token_validation");
 
 router.post("/", createUser);
-router.get("/",checkToken,getUsers);
-router.get("/:id", checkToken, getUserById);
+// router.get("/",checkToken,getUsers);
+router.get("/:id", checkToken, getUserById); //:id replaced
 router.patch("/", checkToken, updateUser);
 router.delete("/", checkToken, deleteUser);
 router.post("/login", login);

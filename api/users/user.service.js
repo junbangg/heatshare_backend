@@ -34,6 +34,7 @@ module.exports = {
       }
     );
   },
+  //have to change because it clashes with getUserById
   getUsers: callBack => {
     pool.query(
       'select user_id, email, profile_image, username from User',
